@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <!-- <script defer src="./home.js" type="module"></script> -->
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            /* background: linear-gradient(-135deg, ); */
+            background-color: #FFDEE9;
+            background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+            justify-content: center;
+
+        }
+
+        .center-contents {
+            font-family: 'Courier New';
+            text-align: center;
+        }
+
+        /* .username_input {
+            padding-bottom: 15px;
+        } */
+
+
+        h1 {
+            font-size: 100px;
+            padding-top: 50px;
+            padding-bottom: 50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function Validate() {
+            var name = document.getElementById("username").value;
+            if (name == null || name == "") {
+                alert("Enter your username");
+                return;
+            }
+            else if (name.length > 6) {
+                alert("Usename is too long");
+                return;
+            }
+            else {
+                console.log(name);
+                window.location.href = 'game/' + name;
+
+
+            }
+
+
+        }
+    </script>
+
+    <div class="center-contents">
+        <h1>Ping Pong</h1>
+
+        <input class="inputbox" id="username" name="username" type="text" placeholder="username" required>
+        <button onclick="Validate();">Start</button>
+
+
+    </div>
+
+</body>
+
+</html>
